@@ -3,7 +3,7 @@
 import { Theme, createTheme } from "~/lib/theme";
 
 interface Props {
-  theme: Theme;
+  theme?: Theme;
 }
 
 export function ClientTheme({ theme }: Props) {
