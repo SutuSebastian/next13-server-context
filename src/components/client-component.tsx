@@ -1,11 +1,11 @@
 "use client";
 
-import { getServerContext } from "~/contexts/getServerContext";
+import { getTheme } from "~/lib/theme";
 
-export const ClientComponent = () => {
-  const ServerContext = getServerContext();
+export function ClientComponent() {
+  const theme = getTheme();
 
-  console.log("client component:", ServerContext);
+  console.log("client component:", theme);
 
-  return <div>client: {JSON.stringify(ServerContext)}</div>;
-};
+  return <div>client: {JSON.stringify(theme)}</div>;
+}

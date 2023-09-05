@@ -1,9 +1,9 @@
-import { getServerContext } from "~/contexts/getServerContext";
+import { getTheme } from "~/lib/theme";
 
-export const ServerComponent = () => {
-  const ServerContext = getServerContext({ name: "override title" });
+export function ServerComponent() {
+  const theme = getTheme();
 
-  console.log("server component:", ServerContext);
+  console.log("server component:", theme);
 
-  return <div>server: {JSON.stringify(ServerContext)}</div>;
-};
+  return <div>server: {JSON.stringify(theme)}</div>;
+}
