@@ -1,8 +1,11 @@
 import type { AppProps } from "next/app";
-import { createTheme } from "~/lib/theme";
+import { Init } from "~/lib/theme/init";
 
 export default function App({ Component, pageProps }: AppProps) {
-  createTheme({ name: "override title" });
-
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Init theme={{ name: "override title" }} />
+      <Component {...pageProps} />
+    </>
+  );
 }

@@ -1,3 +1,5 @@
+import { Init } from "~/lib/theme/init";
+
 export default function RootLayout({
   children,
 }: {
@@ -6,7 +8,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body>
+        <Init theme={{ name: "override title" }} />
+        {children}
+      </body>
     </html>
   );
 }
